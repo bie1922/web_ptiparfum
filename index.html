@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0b14">
+  <meta name="description" content="Parfum Anak Teknologi Informasi — temukan aroma yang mencerminkan karakter kamu.">
+  <title>PTI Parfum — Find Your Signature Scent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+</head>
+<body class="bg-ink text-white antialiased">
+  <div class="announcement-bar">
+    <p>✨ Temukan aroma khasmu bersama PTI Parfum</p>
+  </div>
+
+  <header class="site-header" id="top">
+    <nav class="container nav-wrap" aria-label="Navigasi utama">
+      <a class="brand" href="#top" aria-label="PTI Parfum Beranda">
+        <span class="brand-mark">P</span>
+        <span><strong>PTI</strong><small>PARFUM</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#top">Beranda</a>
+        <a href="#koleksi">Koleksi</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+
+      <button class="cart-button" id="cart-open" type="button" aria-label="Buka keranjang">
+        <span aria-hidden="true">♧</span> Keranjang <b id="cart-count">0</b>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-copy animate-fade-up">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> SCENT YOUR WAY</span>
+          <h1>Aroma yang<br><em>bercerita</em> tentangmu.</h1>
+          <p>Temukan karakter dalam setiap semprotan. Koleksi parfum pilihan untuk menemani setiap versi terbaik dirimu.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#koleksi">Jelajahi koleksi <span>↗</span></a>
+            <a class="text-link" href="#tentang">Kenali PTI <span>→</span></a>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-avatars"><span>✦</span><span>✧</span><span>✺</span></div>
+            <p><strong>Aroma pilihan</strong><br><small>Dikurasi dengan sepenuh hati</small></p>
+          </div>
+        </div>
+
+        <div class="hero-art animate-fade-in" aria-label="Ilustrasi botol parfum">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-label">EAU DE PARFUM <span>PTI • COLLECTION</span></div>
+          <div class="perfume-bottle">
+            <div class="bottle-cap"></div>
+            <div class="bottle-neck"></div>
+            <div class="bottle-body">
+              <div class="bottle-shine"></div>
+              <div class="bottle-brand">PTI</div>
+              <div class="bottle-line"></div>
+              <div class="bottle-name">NO. 01</div>
+              <div class="bottle-small">SIGNATURE SCENT</div>
+            </div>
+          </div>
+          <span class="floating-note note-top">✦ Wangi berkarakter</span>
+          <span class="floating-note note-bottom">Made for your moments</span>
+        </div>
+      </div>
+      <div class="hero-bottom-line"></div>
+    </section>
+
+    <section class="benefits-section">
+      <div class="container benefits-grid">
+        <div class="benefit"><span class="benefit-icon">✧</span><div><strong>Aroma berkarakter</strong><small>Untuk setiap suasana</small></div></div>
+        <div class="benefit"><span class="benefit-icon">❋</span><div><strong>Kurasi pilihan</strong><small>Temukan favoritmu</small></div></div>
+        <div class="benefit"><span class="benefit-icon">♡</span><div><strong>Dibuat untukmu</strong><small>Jadikan momen berarti</small></div></div>
+      </div>
+    </section>
+
+    <section class="section collection-section" id="koleksi">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div><span class="eyebrow">THE COLLECTION</span><h2>Pilih aroma <em>favoritmu.</em></h2></div>
+          <p>Setiap aroma punya cerita. Temukan yang paling dekat dengan karaktermu.</p>
+        </div>
+        <div class="catalog-toolbar reveal">
+          <div class="filter-tabs" role="group" aria-label="Filter produk">
+            <button class="filter-tab active" data-filter="Semua" type="button">Semua</button>
+            <button class="filter-tab" data-filter="Fresh" type="button">Fresh</button>
+            <button class="filter-tab" data-filter="Floral" type="button">Floral</button>
+            <button class="filter-tab" data-filter="Woody" type="button">Woody</button>
+          </div>
+          <label class="search-box"><span>⌕</span><input id="product-search" type="search" placeholder="Cari parfum..." aria-label="Cari parfum"></label>
+        </div>
+        <div class="product-grid" id="product-grid" aria-live="polite"></div>
+        <p class="empty-state" id="empty-state" hidden>Produk tidak ditemukan. Coba kata kunci lain.</p>
+      </div>
+    </section>
+
+    <section class="story-section" id="tentang">
+      <div class="container story-grid">
+        <div class="story-art reveal">
+          <div class="story-orb"></div>
+          <div class="story-card">
+            <span>PTI</span>
+            <div class="story-card-line"></div>
+            <small>FIND YOUR<br>SIGNATURE</small>
+          </div>
+          <div class="story-stamp">SCENT<br>IS A<br>MEMORY</div>
+        </div>
+        <div class="story-copy reveal">
+          <span class="eyebrow">OUR PHILOSOPHY</span>
+          <h2>Bukan sekadar wangi.<br><em>Ini tentang dirimu.</em></h2>
+          <p>PTI Parfum hadir untuk merayakan karakter dan momen personal. Kami percaya aroma punya cara istimewa untuk membangkitkan kenangan, memberi percaya diri, dan membuat setiap hari terasa lebih berarti.</p>
+          <a class="button button-outline" href="#kontak">Kenali lebih dekat <span>→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section">
+      <div class="container quote-inner reveal">
+        <span class="quote-mark">“</span>
+        <blockquote>A scent is the invisible part of your identity.</blockquote>
+        <p>PTI PARFUM — FIND YOUR SIGNATURE SCENT</p>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="kontak">
+      <div class="container contact-card reveal">
+        <div>
+          <span class="eyebrow">LET'S CONNECT</span>
+          <h2>Punya pertanyaan?<br><em>Kami siap membantu.</em></h2>
+          <p>Butuh rekomendasi aroma atau informasi pemesanan? Kirim pesan melalui formulir ini.</p>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <label>Nama<input type="text" name="name" placeholder="Nama kamu" required maxlength="80"></label>
+          <label>Email<input type="email" name="email" placeholder="nama@email.com" required maxlength="120"></label>
+          <label>Pesan<textarea name="message" rows="3" placeholder="Ceritakan yang ingin kamu tanyakan..." required maxlength="1000"></textarea></label>
+          <button class="button button-primary" type="submit">Kirim pesan <span>↗</span></button>
+          <p class="form-note" id="contact-feedback" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand" href="#top"><span class="brand-mark">P</span><span><strong>PTI</strong><small>PARFUM</small></span></a>
+      <p>Aroma yang bercerita tentangmu.</p>
+      <div class="footer-links"><a href="#koleksi">Koleksi</a><a href="#tentang">Tentang</a><a href="#kontak">Kontak</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="current-year"></span> PTI Parfum. All rights reserved.</span><span>Made with care ✦</span></div>
+  </footer>
+
+  <!-- Keranjang belanja -->
+  <div class="modal-backdrop" id="cart-modal" hidden>
+    <section class="cart-modal" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="modal-heading"><div><span class="eyebrow">YOUR SELECTION</span><h2 id="cart-title">Keranjang</h2></div><button class="icon-button" id="cart-close" type="button" aria-label="Tutup keranjang">×</button></div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-total"><span>Total</span><strong id="cart-total">Rp0</strong></div>
+      <button class="button button-primary checkout-button" id="checkout-button" type="button">Lanjutkan pemesanan <span>↗</span></button>
+      <p class="form-note" id="checkout-feedback">Demo keranjang: belum terhubung ke sistem pembayaran.</p>
+    </section>
+  </div>
+
+  <!-- Chatbot PTI -->
+  <button id="chatbot-toggle" class="chatbot-launcher" type="button" aria-label="Buka chatbot" aria-controls="chatbot-panel" aria-expanded="false">
+    <span id="chatbot-toggle-icon" aria-hidden="true">✦</span>
+  </button>
+  <section id="chatbot-panel" class="chatbot-panel" role="dialog" aria-label="Asisten virtual PTI" hidden>
+    <header class="chatbot-header">
+      <div class="bot-avatar">P</div>
+      <div><h3>Asisten PTI</h3><p><span class="online-dot"></span> Siap membantu kamu</p></div>
+      <button id="chatbot-close" class="chatbot-close" type="button" aria-label="Tutup chatbot">×</button>
+    </header>
+    <div id="chatbot-messages" class="chatbot-messages" role="log" aria-live="polite" aria-relevant="additions">
+      <div class="chat-message bot">Halo! 👋 Selamat datang di PTI Parfum. Mau tanya soal koleksi, harga, atau cara pemesanan?</div>
+    </div>
+    <div class="chatbot-quick-replies">
+      <button type="button" data-chat-message="Apa saja produk parfumnya?">🧴 Produk</button>
+      <button type="button" data-chat-message="Berapa harga parfum?">Harga</button>
+      <button type="button" data-chat-message="Bagaimana cara memesan?">🛍️ Pemesanan</button>
+    </div>
+    <form id="chatbot-form" class="chatbot-form">
+      <input id="chatbot-input" type="text" placeholder="Tulis pesan..." aria-label="Tulis pesan untuk chatbot" maxlength="500" autocomplete="off" required>
+      <button type="submit" aria-label="Kirim pesan">➤</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
